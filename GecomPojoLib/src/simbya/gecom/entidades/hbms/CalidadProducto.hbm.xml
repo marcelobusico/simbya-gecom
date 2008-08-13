@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!--
+    Document   : CalidadProducto.hbm.xml
+    Created on : 5 de julio de 2008, 13:03
+    Author     : Marcelo Busico.
+    Description:
+        Mapeo para Hibernate de la clase de entidad CalidadProducto.
+        No olvidar de incluir en hibernate.cfg.xml
+    
+    License:
+            Copyright (C) 2008  Marcelo Busico <marcelobusico@simbya.com.ar>
+ 
+            This file is part of a SIMBYA project.
+ 
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+
+            You should have received a copy of the GNU General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<hibernate-mapping>
+    <class name="simbya.gecom.entidades.CalidadProducto" table="calidadProducto">
+        <id name="oid" column="Id">
+            <generator class="native"/>
+        </id>
+        
+        <many-to-one name="producto" class="simbya.gecom.entidades.Producto" 
+                     column="IdProducto" not-null="true"/>
+        <many-to-one name="calidad" class="simbya.gecom.entidades.TipoCalidad" 
+                     column="IdTipoCalidad" not-null="true"/>
+        <property name="codigoProveedor"/>
+        <property name="precioUltimaCompra"/>
+        <many-to-one name="proveedor" class="simbya.gecom.entidades.Proveedor" 
+                     column="IdProveedor"/>
+        <property name="precioVentaFijo" not-null="true" type="yes_no"/>
+        <property name="precioVenta" not-null="true"/>
+        <property name="porcentajeGanancia" not-null="true"/>
+        <property name="stockActual" not-null="true"/>
+        <property name="stockMinimo" not-null="true"/>
+        <property name="stockMaximo" not-null="true"/>
+    </class>
+</hibernate-mapping>

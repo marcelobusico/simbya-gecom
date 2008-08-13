@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!--
+    Document   : Venta.hbm.xml
+    Created on : 5 de julio de 2008, 14:14
+    Author     : Marcelo Busico.
+    Description:
+        Mapeo para Hibernate de la clase de entidad Venta.
+        No olvidar de incluir en hibernate.cfg.xml
+    
+    License:
+            Copyright (C) 2008  Marcelo Busico <marcelobusico@simbya.com.ar>
+ 
+            This file is part of a SIMBYA project.
+ 
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+
+            You should have received a copy of the GNU General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+        
+<hibernate-mapping>
+    <class name="simbya.gecom.entidades.Venta" table="venta">
+        <id name="oid" column="Id">
+            <generator class="native"/>
+        </id>
+    
+        <property name="tipoFactura" not-null="true"/>
+        <property name="factura" not-null="true"/>
+        <property name="fecha" not-null="true"/>
+        <many-to-one name="cliente" class="simbya.gecom.entidades.Cliente" 
+                     column="IdCliente"/>
+        <many-to-one name="formaCobro" class="simbya.gecom.entidades.TipoFormaCobro" 
+                     column="IdFormaCobro" not-null="true"/>
+        <property name="importeTotal" not-null="true"/>
+        <property name="importeRecargoDescuento" not-null="true"/>
+        <set name="detalles" cascade="all">
+            <key column="IdVenta"/>
+            <one-to-many class="simbya.gecom.entidades.DetalleVenta"/>
+        </set>
+    </class>
+</hibernate-mapping>

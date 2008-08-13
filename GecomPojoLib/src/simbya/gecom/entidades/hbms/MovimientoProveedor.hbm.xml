@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!--
+    Document   : MovimientoProveedor.hbm.xml
+    Created on : 5 de julio de 2008, 13:46
+    Author     : Marcelo Busico.
+    Description:
+        Mapeo para Hibernate de la clase de entidad MovimientoProveedor.
+        No olvidar de incluir en hibernate.cfg.xml
+    
+    License:
+            Copyright (C) 2008  Marcelo Busico <marcelobusico@simbya.com.ar>
+ 
+            This file is part of a SIMBYA project.
+ 
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+
+            You should have received a copy of the GNU General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+        
+<hibernate-mapping>
+    <class name="simbya.gecom.entidades.MovimientoProveedor" table="movimientoproveedor">
+        <id name="oid" column="Id">
+            <generator class="native"/>
+        </id>
+
+        <property name="fecha" type="date" not-null="true"/>
+        <property name="importe" not-null="true"/>
+        <many-to-one name="pago" class="simbya.gecom.entidades.Pago" 
+                     column="IdPago"/>
+        <many-to-one name="compra" class="simbya.gecom.entidades.Compra" 
+                     column="IdCompra"/>
+    </class>
+</hibernate-mapping>
