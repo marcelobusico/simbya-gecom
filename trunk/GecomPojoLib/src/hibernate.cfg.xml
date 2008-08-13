@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!--
+    Document   : hibernate.cfg.xml
+    Created on : 07 de Junio de 2008, 20:06
+    Author     : Marcelo Busico.
+    Description:
+        Archivo de configuración de Hibernate.
+        Acá deben ir además las inclusiones de las clases de entidad mapeadas.
+    
+    License:
+            Copyright (C) 2008  Marcelo Busico <marcelobusico@simbya.com.ar>
+ 
+            This file is part of a SIMBYA project.
+ 
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+
+            You should have received a copy of the GNU General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<hibernate-configuration>
+    <session-factory>
+<!--	
+-->
+	<property name="connection.release_mode">
+	    after_transaction
+	</property>
+	<property name="show_sql">
+	    false
+	</property>
+	<property name="format_sql">
+	    true
+	</property>
+        <property name="dialect">
+	    org.hibernate.dialect.MySQLInnoDBDialect
+        </property>
+        <property name="cache.provider_class">
+	    org.hibernate.cache.NoCacheProvider
+	</property>
+        
+        <!-- Propiedades para usar con sin servidor de aplicaciones -->
+	<property name="current_session_context_class">
+	    thread
+	</property>
+	<property name="connection.driver_class">
+	    com.mysql.jdbc.Driver
+	</property>
+	<property name="connection.url">
+	    jdbc:mysql://localhost:3306/simbyagecomdb
+	</property>
+	<property name="connection.username">
+	    simbyagecom
+	</property>
+	<property name="connection.password">
+	    passphrase
+	</property>
+
+        <!-- Propiedades para usar con servidor de aplicaciones -->
+<!--
+        <property name="current_session_context_class">
+	    org.hibernate.context.JTASessionContext
+        </property>
+        <property name="hibernate.transaction.factory_class">
+	    org.hibernate.transaction.JTATransactionFactory
+        </property>
+        <property name="hibernate.session_factory_name">
+	     hibernate/SessionFactory
+        </property>
+        <property name="hibernate.transaction.manager_lookup_class">
+            org.hibernate.transaction.SunONETransactionManagerLookup
+        </property>
+	<property name="jta.UserTransaction">
+	    java:comp/UserTransaction
+	</property>
+	<property name="connection.datasource">
+	    jdbc/simbyagecomdb
+	</property>
+-->
+
+
+<!-- DESHABILITADO HASTA QUE SE PRODUZCAN CAMBIOS EN EL MAPEO
+-->
+        <property name="hbm2ddl.auto">
+	    update
+        </property>
+        
+        <!-- COMIENZO DEL MAPEO DE CLASES -->
+
+        <!--Entidades Generales-->
+	<mapping resource="simbya/gecom/entidades/hbms/CalidadProducto.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Cobro.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Compra.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/DetalleCompra.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/DetalleVenta.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Localidad.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/MovimientoCliente.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/MovimientoProveedor.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Pago.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Persona.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Producto.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Provincia.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoCalidad.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoCilindradaMoto.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoFormaCobro.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoFormaPago.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoMarca.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoModelo.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoRubro.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/hbms/TipoUnidadMedida.hbm.xml"/>
+	<mapping resource="simbya/gecom/entidades/hbms/Venta.hbm.xml"/>
+
+        <!--Entidades de Parámetros-->
+        <mapping resource="simbya/gecom/entidades/parametros/hbms/ParametroSistema.hbm.xml"/>
+
+        <!--Entidades de Seguridad-->
+        <mapping resource="simbya/gecom/entidades/seguridad/hbms/CasoDeUso.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/seguridad/hbms/TipoUsuarioSistema.hbm.xml"/>
+        <mapping resource="simbya/gecom/entidades/seguridad/hbms/UsuarioSistema.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!--
+    Document   : Producto.hbm.xml
+    Created on : 5 de julio de 2008, 14:16
+    Author     : Marcelo Busico.
+    Description:
+        Mapeo para Hibernate de la clase de entidad Producto.
+        No olvidar de incluir en hibernate.cfg.xml
+    
+    License:
+            Copyright (C) 2008  Marcelo Busico <marcelobusico@simbya.com.ar>
+ 
+            This file is part of a SIMBYA project.
+ 
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+
+            You should have received a copy of the GNU General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+        
+<hibernate-mapping>
+    <class name="simbya.gecom.entidades.Producto" table="producto">
+        <id name="oid" column="Id">
+            <generator class="native"/>
+        </id>
+        
+        <property name="codigo" not-null="true"/>
+        <property name="baja" not-null="true" type="yes_no"/>
+        <property name="fechaBaja"/>
+        <property name="descripcion" not-null="true"/>
+        <many-to-one name="rubro" class="simbya.gecom.entidades.TipoRubro" 
+                     column="IdRubro" not-null="true"/>
+        <many-to-one name="marca" class="simbya.gecom.entidades.TipoMarca" 
+                     column="IdMarca" not-null="true"/>
+        <many-to-one name="cilindradaMoto" class="simbya.gecom.entidades.TipoCilindradaMoto" 
+                     column="IdCilindradaMoto"/>
+        <many-to-one name="modelo" class="simbya.gecom.entidades.TipoModelo" 
+                     column="IdModelo"/>
+        <property name="anio"/>
+        <set name="calidades" cascade="all" inverse="true">
+            <key column="IdProducto"/>
+            <one-to-many class="simbya.gecom.entidades.CalidadProducto"/>
+        </set>
+        <property name="ubicacionEstanteria"/>
+        <property name="imagen">
+            <column name="imagen" sql-type="MEDIUMBLOB"/>
+        </property>
+        <many-to-one name="productoUM" class="simbya.gecom.entidades.TipoUnidadMedida" 
+                     column="IdUMProducto" not-null="true"/>
+        <many-to-one name="dimensionUM" class="simbya.gecom.entidades.TipoUnidadMedida" 
+                     column="IdUMDimension"/>
+        <property name="medidaInterior"/>
+        <property name="medidaExterior"/>
+        <property name="medidaEspesor"/>
+    </class>
+</hibernate-mapping>
