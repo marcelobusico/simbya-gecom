@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6">
+  <NonVisualComponents>
+    <Container class="javax.swing.JMenuBar" name="barraMenu">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+        <Property name="name" type="java.lang.String" value="barraMenu" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="mnuArchivo">
+          <Properties>
+            <Property name="mnemonic" type="int" value="97"/>
+            <Property name="text" type="java.lang.String" resourceKey="mnuArchivo.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuArchivo" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="mnuConfiguracion">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="mnuConfiguracion.icon"/>
+                <Property name="mnemonic" type="int" value="102"/>
+                <Property name="text" type="java.lang.String" resourceKey="mnuConfiguracion.text"/>
+                <Property name="font" type="java.awt.Font" resourceKey="mnuConfiguracion.font"/>
+                <Property name="name" type="java.lang.String" value="mnuConfiguracion" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarParametrosGenerales">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                    <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/gecom/app/resources/icons/wrench_orange.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarParametrosGenerales.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarParametrosGenerales" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarParametrosGeneralesActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarProvinciasYLocalidades">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarProvinciasYLocalidades.icon"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarProvinciasYLocalidades.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarProvinciasYLocalidades" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarProvinciasYLocalidadesActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="mnuUsuarios">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="mnuUsuarios.icon"/>
+                <Property name="mnemonic" type="int" value="117"/>
+                <Property name="text" type="java.lang.String" resourceKey="mnuUsuarios.text"/>
+                <Property name="font" type="java.awt.Font" resourceKey="mnuConfiguracion.font"/>
+                <Property name="name" type="java.lang.String" value="mnuUsuarios" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarTipoUsuario">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarTipoUsuario.icon"/>
+                    <Property name="mnemonic" type="int" value="116"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarTipoUsuario.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarTipoUsuario" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarTipoUsuarioActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarUsuario">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarUsuario.icon"/>
+                    <Property name="mnemonic" type="int" value="117"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarUsuario.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarUsuario" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarUsuarioActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator1">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator1" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmSalir">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="org.jdesktop.application.Application" id="quit" methodName="quit"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                <Property name="name" type="java.lang.String" value="itmSalir" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuVer">
+          <Properties>
+            <Property name="mnemonic" type="int" value="105"/>
+            <Property name="text" type="java.lang.String" resourceKey="mnuVer.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuVer" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JCheckBoxMenuItem" name="itmVerBarraAccesosRapido">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="gecom.app.VentanaMenuPrincipal" id="verBarraAccesosRapido" methodName="verBarraAccesosRapido"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" resourceKey="itmVerBarraAccesosRapido.font"/>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="name" type="java.lang.String" value="itmVerBarraAccesosRapido" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuClientes">
+          <Properties>
+            <Property name="mnemonic" type="int" value="108"/>
+            <Property name="text" type="java.lang.String" resourceKey="mnuClientes.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuClientes" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmActualizarFormaCobro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarFormaCobro.icon"/>
+                <Property name="mnemonic" type="int" value="102"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmActualizarFormaCobro.text"/>
+                <Property name="name" type="java.lang.String" value="itmActualizarFormaCobro" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarFormaCobroActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmActualizarCliente">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/gecom/app/resources/icons/user-plain-yellow.png"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="116"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmActualizarCliente.text"/>
+                <Property name="name" type="java.lang.String" value="itmActualizarCliente" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarClienteActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator5">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator5" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmRegistrarCobroCliente">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmRegistrarCobroCliente.icon"/>
+                <Property name="mnemonic" type="int" value="111"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmRegistrarCobroCliente.text"/>
+                <Property name="name" type="java.lang.String" value="itmRegistrarCobroCliente" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmRegistrarCobroClienteActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator7">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator7" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmConsultarCuentaCorrienteCliente">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmConsultarCuentaCorrienteCliente.icon"/>
+                <Property name="mnemonic" type="int" value="117"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmConsultarCuentaCorrienteCliente.text"/>
+                <Property name="name" type="java.lang.String" value="itmConsultarCuentaCorrienteCliente" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmConsultarCuentaCorrienteClienteActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuProveedores">
+          <Properties>
+            <Property name="mnemonic" type="int" value="114"/>
+            <Property name="text" type="java.lang.String" resourceKey="mnuProveedores.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuProveedores" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmActualizarFormaPago">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarFormaPago.icon"/>
+                <Property name="mnemonic" type="int" value="102"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmActualizarFormaPago.text"/>
+                <Property name="name" type="java.lang.String" value="itmActualizarFormaPago" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarFormaPagoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmActualizarProveedor">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/gecom/app/resources/icons/user-plain-yellow.png"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="116"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmActualizarProveedor.text"/>
+                <Property name="name" type="java.lang.String" value="itmActualizarProveedor" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarProveedorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator3">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator3" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmRegistrarPagoProveedor">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmRegistrarPagoProveedor.icon"/>
+                <Property name="mnemonic" type="int" value="111"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmRegistrarPagoProveedor.text"/>
+                <Property name="name" type="java.lang.String" value="itmRegistrarPagoProveedor" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmRegistrarPagoProveedorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator8">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator8" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmConsultarCuentaCorrienteProveedor">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmConsultarCuentaCorrienteProveedor.icon"/>
+                <Property name="mnemonic" type="int" value="117"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmConsultarCuentaCorrienteProveedor.text"/>
+                <Property name="name" type="java.lang.String" value="itmConsultarCuentaCorrienteProveedor" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmConsultarCuentaCorrienteProveedorActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuProductos">
+          <Properties>
+            <Property name="mnemonic" type="int" value="112"/>
+            <Property name="text" type="java.lang.String" resourceKey="mnuProductos.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuProductos" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="mnuProductosTablasYTipos">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="mnuProductosTablasYTipos.icon"/>
+                <Property name="mnemonic" type="int" value="121"/>
+                <Property name="text" type="java.lang.String" resourceKey="mnuProductosTablasYTipos.text"/>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="name" type="java.lang.String" value="mnuProductosTablasYTipos" noResource="true"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarCalidad">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarCalidad.icon"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarCalidad.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarCalidad" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarCalidadActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarCilindradaMoto">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                    <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/gecom/app/resources/icons/database.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarCilindradaMoto.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarCilindradaMoto" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarCilindradaMotoActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarMarca">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarMarca.icon"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarMarca.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarMarca" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarMarcaActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarModelo">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarModelo.icon"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarModelo.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarModelo" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarModeloActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarRubro">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarRubro.icon"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarRubro.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarRubro" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarRubroActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="itmActualizarUnidadMedida">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarUnidadMedida.icon"/>
+                    <Property name="text" type="java.lang.String" resourceKey="itmActualizarUnidadMedida.text"/>
+                    <Property name="name" type="java.lang.String" value="itmActualizarUnidadMedida" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarUnidadMedidaActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator9">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator9" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmActualizarProducto">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/gecom/app/resources/icons/package.png"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="116"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmActualizarProducto.text"/>
+                <Property name="toolTipText" type="java.lang.String" resourceKey="itmActualizarProducto.toolTipText"/>
+                <Property name="name" type="java.lang.String" value="itmActualizarProducto" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarProductoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmActualizarPreciosProductos">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/gecom/app/resources/icons/money_dollar.png"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="114"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmActualizarPreciosProductos.text"/>
+                <Property name="name" type="java.lang.String" value="itmActualizarPreciosProductos" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarPreciosProductosActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmActualizarStockProductos">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmActualizarStockProductos.icon"/>
+                <Property name="mnemonic" type="int" value="107"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmActualizarStockProductos.text"/>
+                <Property name="name" type="java.lang.String" value="itmActualizarStockProductos" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmActualizarStockProductosActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator11">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator11" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmGenerarInformeProductosVendidos">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" noResource="true" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/gecom/app/resources/icons/chart_curve.png"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="105"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmGenerarInformeProductosVendidos.text"/>
+                <Property name="name" type="java.lang.String" value="itmGenerarInformeProductosVendidos" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmGenerarInformeProductosVendidosActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuCompras">
+          <Properties>
+            <Property name="mnemonic" type="int" value="99"/>
+            <Property name="text" type="java.lang.String" resourceKey="mnuCompras.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuCompras" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmRegistrarCompra">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Shift+Ctrl+C"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmRegistrarCompra.icon"/>
+                <Property name="mnemonic" type="int" value="114"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmRegistrarCompra.text"/>
+                <Property name="name" type="java.lang.String" value="itmRegistrarCompra" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmRegistrarCompraActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuVentas">
+          <Properties>
+            <Property name="mnemonic" type="int" value="118"/>
+            <Property name="text" type="java.lang.String" resourceKey="mnuVentas.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuVentas" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmRegistrarVenta">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="gecom.app.VentanaMenuPrincipal" id="accionRegistrarVenta" methodName="accionRegistrarVenta"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                <Property name="name" type="java.lang.String" value="itmRegistrarVenta" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator6">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="jSeparator6" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmGenerarInformeVentas">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="Application.font.label"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="itmGenerarInformeVentas.icon"/>
+                <Property name="mnemonic" type="int" value="105"/>
+                <Property name="text" type="java.lang.String" resourceKey="itmGenerarInformeVentas.text"/>
+                <Property name="name" type="java.lang.String" value="itmGenerarInformeVentas" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmGenerarInformeVentasActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuAyuda">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="mnuAyuda.text"/>
+            <Property name="font" type="java.awt.Font" resourceKey="barraMenu.font"/>
+            <Property name="name" type="java.lang.String" value="mnuAyuda" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmAcercaDe">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="gecom.app.VentanaMenuPrincipal" id="showAboutBox" methodName="showAboutBox"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" resourceKey="itmActualizarParametrosGenerales.font"/>
+                <Property name="name" type="java.lang.String" value="itmAcercaDe" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panelEstado">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="panelEstado" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="sepPanelEstado" alignment="0" pref="883" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lblEstadoMensaje" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="699" max="32767" attributes="0"/>
+                  <Component id="barraProgreso" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lblEstadoAnimacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="sepPanelEstado" min="-2" pref="2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblEstadoMensaje" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblEstadoAnimacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="barraProgreso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JSeparator" name="sepPanelEstado">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="sepPanelEstado" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblEstadoMensaje">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="lblEstadoMensaje" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblEstadoAnimacion">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="name" type="java.lang.String" value="lblEstadoAnimacion" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="barraProgreso">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="barraProgreso" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JToolBar" name="barraAccesosRapido">
+      <Properties>
+        <Property name="rollover" type="boolean" value="true"/>
+        <Property name="name" type="java.lang.String" value="barraAccesosRapido" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="btnRegistrarVenta">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="10" style="1"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="btnRegistrarVenta.icon"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="btnRegistrarVenta.toolTipText"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="btnRegistrarVenta" noResource="true"/>
+            <Property name="opaque" type="boolean" value="false"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarVentaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnRegistrarCompra">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="btnRegistrarCompra.font"/>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="btnRegistrarCompra.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="btnRegistrarCompra.text"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="btnRegistrarCompra" noResource="true"/>
+            <Property name="opaque" type="boolean" value="false"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarCompraActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToolBar$Separator" name="jSeparator4">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jSeparator4" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnActualizarProducto">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="btnActualizarProducto.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="btnActualizarProducto.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="btnActualizarProducto.toolTipText"/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+            <Property name="name" type="java.lang.String" value="btnActualizarProducto" noResource="true"/>
+            <Property name="opaque" type="boolean" value="false"/>
+            <Property name="verticalTextPosition" type="int" value="3"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnActualizarProductoActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JPanel" name="panelSeparador">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="panelSeparador" noResource="true"/>
+            <Property name="opaque" type="boolean" value="false"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[100, 10]"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="636" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Component class="javax.swing.JLabel" name="lblFechaHora">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="Application.font.big"/>
+            <Property name="text" type="java.lang.String" resourceKey="lblFechaHora.text"/>
+            <Property name="name" type="java.lang.String" value="lblFechaHora" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JScrollPane" name="panelDesplazamiento">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="panelDesplazamiento" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JDesktopPane" name="panelPrincipal">
+          <Properties>
+            <Property name="dragMode" type="int" value="1"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[640, 480]"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="panelPrincipal" noResource="true"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[800, 500]"/>
+            </Property>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout"/>
+        </Container>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="component" type="javax.swing.JComponent" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="panelDesplazamiento"/>
+    </Property>
+    <Property name="menuBar" type="javax.swing.JMenuBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="barraMenu"/>
+    </Property>
+    <Property name="statusBar" type="javax.swing.JComponent" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="panelEstado"/>
+    </Property>
+    <Property name="toolBar" type="javax.swing.JToolBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="barraAccesosRapido"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,100,0,0,3,115"/>
+  </AuxValues>
+</Form>
